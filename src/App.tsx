@@ -15,10 +15,13 @@ export interface GameQuery {
   platform: Platform | null;
   sortOrder: string;
   search: string;
+  count: number;
 }
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  const [gameQuery, setGameQuery] = useState<GameQuery>({
+    count: 20,
+  } as GameQuery);
 
   return (
     <Grid
