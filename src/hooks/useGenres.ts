@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import APIclient from "../services/api-client.ts";
 import genres from "../data/genres.ts";
 import ms from "ms";
