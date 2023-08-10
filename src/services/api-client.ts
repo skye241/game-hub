@@ -23,5 +23,10 @@ class APIclient<T> {
     const request = apiClient.get<FetchDataResponse<T>>(this.endPoint, config);
     return request.then((res) => res.data.results);
   };
+
+  get = (id: number | string, config?: AxiosRequestConfig) => {
+    const request = apiClient.get<T>(`${this.endPoint}/${id}`, config);
+    return request.then((res) => res.data);
+  };
 }
 export default APIclient;
